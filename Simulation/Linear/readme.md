@@ -13,6 +13,8 @@ The batch file then reads the matrix and executes the DM.sim.linear.1 with each 
 
 In the submit.qsub file please ensure the number at the end of line 8 is the number of rows in the matrix. In the simulation I have 400 parameter choices when we observe one observation at each time point and 1000 iterations. Hence, 400000 rows are in my matrix.
 
+Note - the output files each have one row of results. This is because each file includes the result from a single iteration for a given set of parameter choices. A shell script was run using the 'cat' comman in linux to combine all iterations into one .txt file. This resulted in a single file, with 1000 rows, for each parameter combination. The file 'results2_b1_0.5_scen_1_b2_0.5_scen_1_sd_0.2.txt' is one of the output files. This file include the results from the 1000 iterations when beta_0 and beta_1 are both linearly increasing over time by 0.5 over the complete data set.
+
 dma_linear_DAJ_source.R is the edited source code for the dma package to enable batch updating (updating with more than one observation).
 
 If developing a Bayesian updating linear model with batch updating, install and load the DMA package in R and then run "source(dma_linear_DAJ_source.R)".  
