@@ -4,7 +4,7 @@ DM_sim_linear_pipe_batch_parallelised_DAJ.R sets up the simulation scenarios
 DM_sim_linear_1obperday_final_parallelised.R is the code for each iteration   
 submit.qsub is the bash script used to execute the simulation  
 
-All of the above code is used for the simulation for one observation at each time t.
+All of the above files is the code needed for the simulation when we observe one observation at each time t.
 
 The simulation was run on the computational shared facility (http://ri.itservices.manchester.ac.uk/csf3) at Manchester University.  
 All files were placed in the same folder and then the submit.qsub file was submitted. This file is BASH script and executes the R files.  
