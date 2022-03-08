@@ -13,3 +13,6 @@ The batch file then reads the matrix and executes the DM.sim.linear.1 with each 
 In the submit.qsub file please ensure the number at the end of line 8 is the number of rows in the matrix. In the simulation I have 400 parameter choices when we observe one observation at each time point and 1000 iterations. Hence, 400000 rows are in my matrix.
 
 
+If developing a Bayesian updating linear model the install and load the DMA package in R and then run "source(dma_linear_DAJ_source.R)".  
+This enables batch updating for a linear model and requires an extra argument, update_t.  
+update_t is a vector of the observation numbers for when to update the model. For example update_t=c(5,10) will update the model at the 5th and 10th observation. All the other arguments ramain the same and none of the function names are changed, "dma()" is still the function to build the model.  
