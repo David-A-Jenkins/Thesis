@@ -5,6 +5,6 @@
 
 module load apps/gcc/R/3.6.1
 
-#$ -t 1-4
+#$ -t 1-400000
 
-Rscript DM_sim_linear_pipe_batch.R $SGE_TASK_ID
+Rscript DM_sim_linear_pipe_batch_parallelised.R $SGE_TASK_ID
